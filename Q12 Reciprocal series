@@ -1,0 +1,16 @@
+//Sum of reciprocal 1/n series
+#include <stdio.h>
+int main(){
+    int n;
+    float value=1.0;
+    printf("Enter the value of n.\n");
+    scanf("%d",&n);
+    printf("The series computes to :\n");
+    for(int i=2; i<=n; i++)
+    {
+        float k=(1/(float)i);
+        value = value + k;
+    }
+    printf("%f",value);
+    return 0;
+}
