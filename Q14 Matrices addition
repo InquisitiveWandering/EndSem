@@ -1,0 +1,49 @@
+//WAP to find the addition of two matrices.
+#include <stdio.h>
+int main(){
+    //rows and cols
+    int rows,cols;
+    printf("Enter the number of rows: ");
+    scanf("%d",&rows);
+    printf("Enter the number of columns: ");
+    scanf("%d",&cols);
+    
+    //reading elements of first matrix
+    int a[rows][cols];
+    printf("Enter the first array's elements:\n");
+    for(int i=0; i<rows; i++)
+    {
+        for(int j=0; j<cols; j++)
+        {
+            printf("Element at a[%d][%d]: ",i,j);
+            scanf("%d",&a[i][j]);
+        }
+    }
+    
+    //reading elements of second matrix
+    int b[rows][cols];
+    printf("Enter the second matrice's elements.\n");
+    for(int i=0; i<rows; i++)
+    {
+        for(int j=0; j<cols; j++)
+        {
+            printf("Element at b[%d][%d]: ",i,j);
+            scanf("%d",&b[i][j]);
+        }
+    }
+    
+    //calculation and display
+    printf("The sum of the matricies results in:\n");
+    int sum[rows][cols];
+    for(int i=0; i<rows; i++)
+    {
+        for(int j=0; j<cols; j++)
+        {
+            sum[i][j]=a[i][j]+b[i][j];
+            printf("%d\t",sum[i][j]);
+        }
+         printf("\n");
+    }
+    
+    return 0;
+}
