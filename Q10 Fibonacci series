@@ -1,0 +1,35 @@
+//Fibonacci series
+/* WAP to print the first n terms of the Fibonacci series. 
+0     1      1      2      3     5      8     13  …     */
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter the nth element.\n");
+    scanf("%d",&n);
+    int i=0,j=1,k=i+j;
+    
+    printf("The resulting series is:\n");
+    if(n==1)
+    {
+        printf("%d\t",i);
+    }
+    else if(n==2)
+    {
+        printf("%d\t",i);
+        printf("%d\t",j);
+    }
+    else
+    {
+        printf("%d\t",i);
+        printf("%d\t",j);
+        for(int a=3; a<=n; a++)
+        {
+            k=i+j;
+            printf("%d\t",k);
+            i=j;
+            j=k;
+        }
+    }
+    
+    return 0;
+}
