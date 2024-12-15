@@ -1,0 +1,16 @@
+//base-exponent series
+#include <stdio.h>
+#include <math.h>
+int main() {
+    int n;
+    printf("Enter the value of n for the n^n series:");
+    scanf("%d",&n);
+    int value=1;
+    for(int i=2; i<=n; i++)
+    {
+        int x=pow(i,i);
+        value = value + x;
+    }
+    printf("The series for first %d terms computes to %d.",n,value);
+    return 0;
+}
