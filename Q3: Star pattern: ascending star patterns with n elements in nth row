@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main(){
     int n;
-    printf("Enter the number of rows and last row elements.\n");
+    printf("Enter the number of rows and number of elements in the last row.\n");
     scanf("%d",&n);
     
     printf("Output:\n");
