@@ -1,0 +1,18 @@
+//WAP to print the multiplication table of a number between 2 and 10.
+#include <stdio.h>
+int main(){
+    //input
+    int n;
+    printf("To compute n!, enter the value of n.\n");
+    scanf("%d",&n);
+    
+    //output
+    int factorial=1; //min value of factorial
+    for(int i=1; i<=n; i++)
+    {
+        factorial=factorial*i;
+    }
+    printf("%d! computes to %d.",n,factorial);
+    //if n=0; for loop condition fails
+    return 0;
+}
