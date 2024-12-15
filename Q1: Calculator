@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include <math.h>
+void calculator(){
+    //Upper Display
+    printf("************************* CALCULATOR ****************************\n");
+    printf("1. Addition\t2. Subtraction\t3. Multiplication\t4.Division\t 5. Power");
+    printf("\n*****************************************************************");
+    printf("\nEnter your choice (1/2/3/4/5): ");
+    
+    //input
+    int choice;
+    float a,b;
+    scanf("%d",&choice);
+    
+    void inputf(){
+        printf("Enter first number: ");
+        scanf("%f",&a);
+        printf("Enter second number: ");
+        scanf("%f",&b);
+    }
+    
+    switch (choice)
+    {
+        case 1:
+        inputf();
+        printf("%f + %f = %f",a,b,a+b);
+        break;
+    
+        case 2:
+        inputf();
+        printf("%f - %f = %f",a,b,a-b);
+        break;
+
+        case 3:
+        inputf();
+        printf("%f * %f = %f",a,b,a*b);
+        break;
+    
+        case 4:
+        inputf();
+        printf("%f / %f = %f",a,b,a/b);
+        break;
+        
+        case 5:
+        inputf();
+        printf("%f ^ %f = %f", a,b, powf(a,b));
+        break;
+        
+        default:
+        printf("Wrong input\n");
+    }
+}
+
+int main() {
+    calculator();
+    printf("\nDo you want to perform another operation (For YES, press y / For NO, press n):");
+    char yesno;
+    scanf(" %c",&yesno);
+    switch (yesno)
+    {
+        case 'y':
+        calculator();
+        break;
+        
+        case 'n':
+        printf("\n***************************** THANK YOU **************************");
+        break;
+        
+        default:
+        printf("Wrong input.\n");
+    }
+    return 0;
+}
