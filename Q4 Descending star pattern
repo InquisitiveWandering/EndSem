@@ -1,0 +1,24 @@
+/* WAP to print the following pattern, where the number of such lines needs to be read from the keyboard. 
+*    *   *   * 
+*   *   * 
+*   * 
+*                    */
+
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter the number.\n");
+    scanf("%d",&n);
+    
+    printf("Output: \n");
+    for(int i=n; i>=1; i--)//kth row
+    {
+        for(int j=i; j>=1; j--)//kth row=k to 1 elements
+        {
+            printf("*\t");
+        }
+        printf("\n");
+    }
+    return 0;
+}
