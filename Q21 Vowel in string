@@ -1,0 +1,31 @@
+//WAP to print all the vowels present in a string.
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int i = 0, hasVowels = 0;
+
+    // Input the string
+    printf("Enter a string: ");
+    scanf("%[^\n]s", str); // Reads the input including spaces
+
+    printf("Vowels in the string: ");
+
+    // Traverse the string
+    while (str[i] != '\0') {
+        // Check if the character is a vowel
+        if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u' ||
+            str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O' || str[i] == 'U') {
+            printf("%c ", str[i]);
+            hasVowels = 1; // Flag to indicate vowels are found
+        }
+        i++;
+    }
+
+    if (!hasVowels) {
+        printf("None");
+    }
+
+    printf("\n");
+    return 0;
+}
