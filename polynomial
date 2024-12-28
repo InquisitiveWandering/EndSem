@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+//Independent variable
+float x;
+printf("Enter the value of the independent variable.\n");
+scanf("%f",&x);
+
+//Degree of the polynomial
+int m;
+printf("Enter the degree of the polynomial.\n");
+scanf("%d",&m);
+while(m<0)
+{
+    printf("The degree is a non-negative integer. Please recheck and re-enter.\n");
+    scanf("%d",&m);
+}
+
+//Coefficients:
+float poly[m+1];
+for(int i=m; i>=0; i--)
+{
+    printf("Enter the coefficient of a_%d :",i);
+    scanf("%d",&poly[i]);
+}
+//computing
+float sum=0;
+for(int i=m; i>=0; i--)
+{
+    sum=sum+ (powf(x,i));
+}
+
+printf("The sum is equal to %f approximately.\n",sum);
+return 0;
+}
